@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Gilroy"; /* Choose a name for your font */
+  src: url("./font/SVNGilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./font/SVNGilroy-Bold.otf") format("opentype");
+  font-weight: bold; /* 700 */
+}
+
+@font-face {
+  font-family: "SFPRO"; /* Choose a name for your font */
+  src: url("./font/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SFPRO"; /* Choose a name for your font */
+  src: url("./font/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SFPRO"; /* Choose a name for your font */
+  src: url("./font/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 800;
+}
+
+body {
+  font-weight: 700;
+  font-family: Gilroy;
+}
+
+.line {
+  @apply w-full bg-[#ccd1d2] h-[1px];
+}
+
+.global-container {
+  @apply w-full m-auto; /* Default styles */
+  padding-left: 14px;
+  padding-right: 14px;
+
+  @screen xs {
+    padding-left: 25px; /* Extra small screens */
+    padding-right: 25px;
+  }
+
+  @screen sm {
+    padding-left: 35px; /* Small screens */
+    padding-right: 35px;
+  }
+
+  @screen md {
+    padding-left: 40px; /* Medium screens */
+    padding-right: 40px;
+  }
+
+  @screen lg {
+    padding-left: 40px; /* Large screens */
+    padding-right: 40px;
+  }
+  @screen xl {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @screen 2xl {
+    max-width: calc(1440px - 130px - 130px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.card-container {
+  box-shadow: 0px 4px 28px -2px #00000014;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-shadow-product {
+  box-shadow: 0px -6px 6px 0px #0000000f;
+}
+
+.remove-shadow-product {
+  box-shadow: initial !important;
+}
+
+.btn > button {
+  @apply bg-white;
+}
